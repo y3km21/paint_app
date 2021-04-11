@@ -1,5 +1,7 @@
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const WasmpackPlugin = require("@wasm-tool/wasm-pack-plugin");
+
 const path = require("path");
 
 module.exports = {
@@ -15,6 +17,13 @@ module.exports = {
     //new CopyWebpackPlugin({patterns: [{ from: "./src/index.html", to: "./dist" }],}),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
+    }),
+
+    new WasmpackPlugin({
+      crateDirectory: path.resolve(__dirname, "./src/wasm"),
+      args: "--log-level warn",
+      //extraArgs: "--no-typescript",
+      outDir: path.resolve(__dirname, "./src/wasm/pkg"),
     }),
   ],
 
@@ -53,5 +62,10 @@ module.exports = {
         ],
       },
     ],
+  },
+
+  //wasm
+  experiments: {
+    syncWebAssembly: true,
   },
 };

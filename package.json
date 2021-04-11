@@ -1,7 +1,7 @@
 {
-  "name": "ts_template",
+  "name": "drawasm",
   "version": "0.0.2",
-  "description": "ts template",
+  "description": "",
   "main": "index.js",
   "private": "true",
   "scripts": {
@@ -11,8 +11,12 @@
   },
   "author": "Yusuke Mitsui",
   "license": "MIT",
+  "dependencies": {
+    "wasm": "file:./src/wasm/pkg"
+  },
   "devDependencies": {
     "@types/lodash": "~4.14.168",
+    "@wasm-tool/wasm-pack-plugin": "^1.4.0",
     "copy-webpack-plugin": "~8.1.1",
     "css-loader": "~5.2.0",
     "html-webpack-plugin": "~5.3.1",

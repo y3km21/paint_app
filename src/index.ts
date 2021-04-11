@@ -1,6 +1,10 @@
 import * as _ from "lodash";
 import "./style/reset.scss";
 import "./style/main.scss";
+import * as wasm from "wasm";
+
+
+
 const hoge = require("./ts/description");
 
 const heading_div = document.createElement("div");
@@ -13,4 +17,5 @@ wrapper.appendChild(heading_div);
 wrapper.appendChild(hoge.addDiv());
 
 document.body.appendChild(wrapper);
-//hoge.addDiv();
+
+wasm.greet();
