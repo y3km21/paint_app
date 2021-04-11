@@ -20,10 +20,10 @@ module.exports = {
     }),
 
     new WasmpackPlugin({
-      crateDirectory: path.resolve(__dirname, "./src/wasm"),
+      crateDirectory: path.resolve(__dirname, "../wasm"),
       args: "--log-level warn",
       //extraArgs: "--no-typescript",
-      outDir: path.resolve(__dirname, "./src/wasm/pkg"),
+      outDir: path.resolve(__dirname, "../wasm/pkg"),
     }),
   ],
 
