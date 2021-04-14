@@ -1,0 +1,87 @@
+@import "variables";
+
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $background-color1;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+%text {
+  justify-content: center;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#heading {
+  @extend %text;
+  padding: 0.6em;
+  font-size: 2em;
+  background-color: dodgerblue;
+}
+
+#description {
+  @extend %text;
+  padding: 0.6em;
+  font-size: 1em;
+  background-color: $sub-color0;
+}
+
+#drawApp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#buttonsAndCanvas {
+  display: flex;
+  flex-direction: row;
+}
+
+#draw_canvas {
+  width: fit-content;
+  margin: 5px;
+}
+
+#actionButtons {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 2px 2px 0;
+  button {
+    border-width: 1px;
+    border-color: black;
+    border-style: dotted;
+    color: lightgray;
+  }
+  button[currentModeHighlight="true"] {
+    color: black;
+  }
+}
+
+#palette {
+  display: flex;
+  flex-direction: row;
+  .paletteCell {
+    width: 30px;
+    height: 30px;
+    margin: 0 1px 0 1px;
+    border-style: none;
+    border-width: 2px;
+  }
+  .paletteCell[selectPaletteCell="true"] {
+    border-style: inset;
+  }
+}

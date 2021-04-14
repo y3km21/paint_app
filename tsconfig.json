@@ -4,9 +4,9 @@
     "sourceMap": true,
     "noImplicitAny": true,
     "module": "esNext",
-    "target": "esNext",
+    "target": "es2020",
     "jsx": "react",
     "allowJs": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
   }
 }

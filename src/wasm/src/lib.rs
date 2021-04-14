@@ -1,6 +1,8 @@
 mod utils;
+mod wasm_canvas;
 
 use wasm_bindgen::prelude::*;
+//use wasm_canvas::WasmCanvas;
 
 // When the `wee_alloc` feature is enabled, use `wee_alloc` as the global
 // allocator.
@@ -16,4 +18,5 @@ extern "C" {
 #[wasm_bindgen]
 pub fn greet() {
     alert("Hello, wasm! wasm! wasm!");
+    utils::set_panic_hook();
 }

@@ -20,10 +20,10 @@ module.exports = {
     }),
 
     new WasmpackPlugin({
-      crateDirectory: path.resolve(__dirname, "../wasm"),
+      crateDirectory: path.resolve(__dirname, "./src/wasm"),
       args: "--log-level warn",
       //extraArgs: "--no-typescript",
-      outDir: path.resolve(__dirname, "../wasm/pkg"),
+      outDir: path.resolve(__dirname, "./src/wasm/pkg"),
     }),
   ],
 
@@ -33,23 +33,15 @@ module.exports = {
     port: 8080,
   },
 
-  //ts
   module: {
     rules: [
+      //ts
       {
         test: /\.tsx?$/,
-        use: "ts-loader",
+        use: [{ loader: "ts-loader" }],
         exclude: /node_modules/,
       },
-    ],
-  },
-  resolve: {
-    extensions: [".tsx", ".ts", ".js"],
-  },
-
-  //scss
-  module: {
-    rules: [
+      //scss
       {
         test: /\.s[ac]ss$/i,
         use: [
@@ -62,6 +54,9 @@ module.exports = {
         ],
       },
     ],
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
   },
 
   //wasm
