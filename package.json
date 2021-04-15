@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "paint_app",
-=======
-  "name": "PaintTool",
->>>>>>> parent of f67dc7d... Change package.json
   "version": "0.0.2",
   "description": "",
   "main": "index.js",
