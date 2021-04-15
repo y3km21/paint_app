@@ -2,13 +2,13 @@ import * as _ from "lodash";
 import "./style/reset.scss";
 import "./style/main.scss";
 
-import { PaintCanvas } from "./ts/canvas"
+import { PaintCanvas } from "./ts/paintMod/main"
 
 const hoge = require("./ts/description");
 
 const heading_div = document.createElement("div");
 heading_div.id = "heading";
-heading_div.textContent = "TS Template!";
+heading_div.textContent = "DrawApp";
 
 const wrapper = document.createElement("div");
 wrapper.className = "wrapper";
