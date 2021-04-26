@@ -8,7 +8,7 @@ const hoge = require("./ts/description");
 
 const heading_div = document.createElement("div");
 heading_div.id = "heading";
-heading_div.textContent = "DrawApp";
+heading_div.textContent = "Paint App!";
 
 const wrapper = document.createElement("div");
 wrapper.className = "wrapper";
@@ -32,7 +32,7 @@ status.id = "status";
  *  append Child
  */
 status.appendChild(status_point);
-const cv_wrapper = pcanvas.getDrawApp;
-cv_wrapper.appendChild(status);
-wrapper.appendChild(cv_wrapper);
+const paintApp = pcanvas.getDrawApp;
+paintApp.appendChild(status);
+wrapper.appendChild(paintApp);
 document.body.appendChild(wrapper);

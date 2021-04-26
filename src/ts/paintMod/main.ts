@@ -173,4 +173,4 @@ function clamp(val: number, limit: number) {
     return Math.min(Math.max(0, val), limit - 1);
 }
 
-export { PaintCanvas, clamp };
+export { PaintCanvas };

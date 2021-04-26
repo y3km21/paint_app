@@ -38,8 +38,15 @@ module.exports = {
       //ts
       {
         test: /\.tsx?$/,
-        use: [{ loader: "ts-loader" }],
-        exclude: /node_modules/,
+        use: [
+          {
+            loader: "ts-loader",
+            options: {
+              transpileOnly: true,
+            },
+          },
+        ],
+        exclude: [/node_modules/],
       },
       //scss
       {
@@ -61,6 +68,7 @@ module.exports = {
 
   //wasm
   experiments: {
-    syncWebAssembly: true,
+    //syncWebAssembly: true,
+    asyncWebAssembly: true,
   },
 };
